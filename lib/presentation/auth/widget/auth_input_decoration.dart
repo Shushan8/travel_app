@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_app/core/consts/colors.dart';
 
 class AuthInputDecoration extends StatelessWidget {
-    final bool authBorderSideNone;
+  final bool authBorderSideNone;
   final String authHintText;
   const AuthInputDecoration(
       {super.key,

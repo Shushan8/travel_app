@@ -40,7 +40,11 @@ class _AuthScreenState extends State<AuthScreen> {
                 gradient: AppColors.gradientColor,
                 style: AppTypography.s30w7h,
               ),
-            widget.isCratedAcaunt ?  Spacer():SizedBox(height: 20,),
+              widget.isCratedAcaunt
+                  ? Spacer()
+                  : SizedBox(
+                      height: 20,
+                    ),
               Row(
                 children: [
                   Spacer(),
@@ -51,18 +55,22 @@ class _AuthScreenState extends State<AuthScreen> {
                             textAlign: TextAlign.center,
                             'Welcome back you’ve been missed!',
                             style: AppTypography.s20w6h30cBA,
-                          ))
+                          ),
+                        )
                       : Expanded(
                           flex: 6,
                           child: Text(
                             'Create an account so you can explore all the existing jobs',
                             style: AppTypography.s14w5h21cB,
                             textAlign: TextAlign.center,
-                          )),
+                          ),
+                        ),
                   Spacer(),
                 ],
               ),
-              Spacer(flex: 2,),
+              Spacer(
+                flex: 2,
+              ),
               AuthInputDecoration(
                 authBorderSideNone: true,
                 authHintText: 'Email',

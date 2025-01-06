@@ -6,9 +6,9 @@ class TravelApp extends StatelessWidget {
   static final AppRouter appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp.router( 
-    
+    return MaterialApp.router(
       title: 'Todo App',
-      routerConfig: appRouter.config(),);
+      routerConfig: appRouter.config(),
+    );
   }
 }
