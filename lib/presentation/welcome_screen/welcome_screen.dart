@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:travel_app/core/consts/colors.dart';
-import 'package:travel_app/core/consts/typography.dart';
+import 'package:travel_app/presentation/core/consts/colors.dart';
+import 'package:travel_app/presentation/core/consts/typography.dart';
 import 'package:travel_app/gen/assets.gen.dart';
 import 'package:travel_app/presentation/core/router/app_router.dart';
 import 'package:travel_app/presentation/core/widget/globl_backround.dart';
@@ -40,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
                   Button(
                     buttonFunction: () {
                       context.router.push(
-                        const AuthRoute(),
+                         AuthRoute(isCratedAccount: true),
                       );
                     },
                     buttonText: "Login",
