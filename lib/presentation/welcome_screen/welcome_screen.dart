@@ -4,8 +4,8 @@ import 'package:travel_app/presentation/core/consts/colors.dart';
 import 'package:travel_app/presentation/core/consts/typography.dart';
 import 'package:travel_app/gen/assets.gen.dart';
 import 'package:travel_app/presentation/core/router/app_router.dart';
-import 'package:travel_app/presentation/core/widget/globl_backround.dart';
-import 'package:travel_app/presentation/welcome_screen/widget/button.dart';
+import 'package:travel_app/presentation/core/widget/app_background.dart';
+import 'package:travel_app/presentation/core/widget/gradient_button.dart';
 import 'package:travel_app/presentation/welcome_screen/widget/gradient_text.dart';
 
 @RoutePage()
@@ -15,12 +15,12 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BackgroundWidget(
+      body: AppBackground(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Spacer(flex: 3),
               Assets.images.travelImage.image(),
               GradientText(
                 'Discover Your Dream Trips here',
@@ -37,25 +37,36 @@ class WelcomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Button(
-                    buttonFunction: () {
+                  GradientButton(
+                    onTap: () {
                       context.router.push(
-                         AuthRoute(isCratedAccount: true),
+                        AuthRoute(isFromSignUp: true),
                       );
                     },
-                    buttonText: "Login",
-                    begin: true,
+                    title: "Login",
+                    begin: Alignment.topCenter,
+                    horizontal: 50,
+                    vertical: 15,
                   ),
                   Spacer(),
                   Expanded(
-                    child: Text(
-                      'Register',
-                      style: AppTypography.s20w6h30cBA,
+                    child: InkWell(
+                      onTap: () {
+                        context.router.push(
+                          AuthRoute(
+                            isFromSignUp: false,
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Register',
+                        style: AppTypography.s20w6h30cBA,
+                      ),
                     ),
                   )
                 ],
               ),
-              Spacer()
+              SizedBox(height: 60)
             ],
           ),
         ),
