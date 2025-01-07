@@ -11,10 +11,17 @@ part of 'app_router.dart';
 
 /// generated route for
 /// [AuthScreen]
-class AuthRoute extends PageRouteInfo<void> {
-  const AuthRoute({List<PageRouteInfo>? children})
-      : super(
+class AuthRoute extends PageRouteInfo<AuthRouteArgs> {
+  AuthRoute({
+    Key? key,
+    required bool isCratedAccount,
+    List<PageRouteInfo>? children,
+  }) : super(
           AuthRoute.name,
+          args: AuthRouteArgs(
+            key: key,
+            isCratedAccount: isCratedAccount,
+          ),
           initialChildren: children,
         );
 
@@ -23,9 +30,29 @@ class AuthRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return  AuthScreen(isCratedAcaunt: true,);
+      final args = data.argsAs<AuthRouteArgs>();
+      return AuthScreen(
+        key: args.key,
+        isCratedAccount: args.isCratedAccount,
+      );
     },
   );
+}
+
+class AuthRouteArgs {
+  const AuthRouteArgs({
+    this.key,
+    required this.isCratedAccount,
+  });
+
+  final Key? key;
+
+  final bool isCratedAccount;
+
+  @override
+  String toString() {
+    return 'AuthRouteArgs{key: $key, isCratedAccount: $isCratedAccount}';
+  }
 }
 
 /// generated route for

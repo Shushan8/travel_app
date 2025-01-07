@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:travel_app/core/consts/colors.dart';
+import 'package:travel_app/presentation/core/consts/colors.dart';
 
 class AuthIcon extends StatelessWidget {
   final String assetsIcon;
