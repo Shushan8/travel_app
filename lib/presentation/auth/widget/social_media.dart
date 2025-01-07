@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/gen/assets.gen.dart';
-import 'package:travel_app/presentation/auth/widget/auth_icon.dart';
+import 'package:travel_app/presentation/auth/widget/social_icons.dart';
 
-class AuthIconsGrup extends StatelessWidget {
-  const AuthIconsGrup({super.key});
+class SocialMedia extends StatelessWidget {
+  const SocialMedia({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        AuthIcon(assetsIcon: Assets.icon.google),
+        SocialIcons(assetsIcon: Assets.icon.google),
         SizedBox(width: 10),
-        AuthIcon(assetsIcon: Assets.icon.fb),
+        SocialIcons(assetsIcon: Assets.icon.fb),
         SizedBox(width: 10),
-        AuthIcon(assetsIcon: Assets.icon.apple),
+        SocialIcons(assetsIcon: Assets.icon.apple),
       ],
     );
   }

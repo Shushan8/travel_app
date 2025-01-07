@@ -14,13 +14,13 @@ part of 'app_router.dart';
 class AuthRoute extends PageRouteInfo<AuthRouteArgs> {
   AuthRoute({
     Key? key,
-    required bool isCratedAccount,
+    required bool isFromSignUp,
     List<PageRouteInfo>? children,
   }) : super(
           AuthRoute.name,
           args: AuthRouteArgs(
             key: key,
-            isCratedAccount: isCratedAccount,
+            isFromSignUp: isFromSignUp,
           ),
           initialChildren: children,
         );
@@ -33,7 +33,7 @@ class AuthRoute extends PageRouteInfo<AuthRouteArgs> {
       final args = data.argsAs<AuthRouteArgs>();
       return AuthScreen(
         key: args.key,
-        isCratedAccount: args.isCratedAccount,
+        isFromSignUp: args.isFromSignUp,
       );
     },
   );
@@ -42,16 +42,16 @@ class AuthRoute extends PageRouteInfo<AuthRouteArgs> {
 class AuthRouteArgs {
   const AuthRouteArgs({
     this.key,
-    required this.isCratedAccount,
+    required this.isFromSignUp,
   });
 
   final Key? key;
 
-  final bool isCratedAccount;
+  final bool isFromSignUp;
 
   @override
   String toString() {
-    return 'AuthRouteArgs{key: $key, isCratedAccount: $isCratedAccount}';
+    return 'AuthRouteArgs{key: $key, isFromSignUp: $isFromSignUp}';
   }
 }
 
