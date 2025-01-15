@@ -1,16 +1,15 @@
-import 'package:flutter/foundation.dart';
+part of 'auth_bloc.dart';
 
-@immutable
-final class AuthEvent {}
-
-final class SignUpWhitEmailAndPassword extends AuthEvent {
-  final String email;
-  final String password;
-  SignUpWhitEmailAndPassword(this.email, this.password);
-}
-
-final class LoginWithEmailAndPassword extends AuthEvent {
-  final String email;
-  final String password;
-  LoginWithEmailAndPassword(this.email, this.password);
+@freezed
+class AuthEvent with _$AuthEvent {
+  const factory AuthEvent.started() = _Started;
+   const factory AuthEvent.signUpWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) = _SignUpWithEmailAndPassword;
+  const factory AuthEvent.logIn({
+    required String email,
+    required String password,
+  }) = _LogIn;
+  const factory AuthEvent.signInWithGoogle() = _SignInWithGoogle;
 }

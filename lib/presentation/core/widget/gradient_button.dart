@@ -8,6 +8,7 @@ class GradientButton extends StatelessWidget {
   final AlignmentGeometry  begin;
   final double horizontal;
   final double vertical;
+  final double borderRadius;
   const GradientButton({
     super.key,
     required this.title,
@@ -15,11 +16,12 @@ class GradientButton extends StatelessWidget {
     required this.begin,
     required this.horizontal,
     required this.vertical,
+    required this.borderRadius
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -29,7 +31,7 @@ class GradientButton extends StatelessWidget {
           begin: begin,
           end: Alignment.bottomCenter,
         ),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: GestureDetector(
         onTap: onTap,
@@ -41,7 +43,7 @@ class GradientButton extends StatelessWidget {
           child: Center(
             child: Text(
               title,
-              style: AppTypography.s20w6h30cW,
+              style: AppTypography.s20w6cW,
             ),
           ),
         ),
@@ -49,3 +51,5 @@ class GradientButton extends StatelessWidget {
     );
   }
 }
+
+

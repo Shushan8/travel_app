@@ -10,4 +10,7 @@ abstract interface class IAuthRepository {
     required String email,
     required String password,
   });
+
+  Future<Either<String, Unit>> signUpWithGoogle();
+
 }

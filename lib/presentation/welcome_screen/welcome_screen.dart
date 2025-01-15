@@ -24,13 +24,13 @@ class WelcomeScreen extends StatelessWidget {
               Assets.images.travelImage.image(),
               GradientText(
                 'Discover Your Dream Trips here',
-                style: AppTypography.s35w6h52,
+                style: AppTypography.s35w6,
                 gradient: AppColors.gradientColor,
               ),
               SizedBox(height: 20),
               Text(
                 'Where Journeys Begin, Adventures Unfold, and Memories Last Forever.',
-                style: AppTypography.s14w4h21cB,
+                style: AppTypography.s14w4cB,
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 30),
@@ -39,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   GradientButton(
                     onTap: () {
-                      context.router.push(
+                      context.router.replace(
                         AuthRoute(isFromSignUp: true),
                       );
                     },
@@ -47,12 +47,13 @@ class WelcomeScreen extends StatelessWidget {
                     begin: Alignment.topCenter,
                     horizontal: 50,
                     vertical: 15,
+                    borderRadius: 10,
                   ),
                   Spacer(),
                   Expanded(
                     child: InkWell(
                       onTap: () {
-                        context.router.push(
+                        context.router.replace(
                           AuthRoute(
                             isFromSignUp: false,
                           ),
@@ -60,7 +61,7 @@ class WelcomeScreen extends StatelessWidget {
                       },
                       child: Text(
                         'Register',
-                        style: AppTypography.s20w6h30cBA,
+                        style: AppTypography.s20w6cBA,
                       ),
                     ),
                   )
