@@ -6,18 +6,18 @@ class AppBackground extends StatelessWidget {
   final Widget child;
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        SizedBox(
-          width: double.infinity,
-          child: Assets.images.background.image(
-            fit: BoxFit.cover,
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(
+            Assets.images.background.path,
           ),
         ),
-        Container(
-          child: child,
-        )
-      ],
+      ),
+      child: child,
     );
   }
 }

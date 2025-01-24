@@ -4,8 +4,11 @@ import 'package:travel_app/presentation/core/consts/colors.dart';
 class InputField extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
-  const InputField(
-      {super.key, required this.hintText, required this.controller});
+  const InputField({
+    super.key,
+    required this.hintText,
+    required this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,7 @@ class InputField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(
-            color: Colors.orange,
+            color: AppColors.brightRedOrange,
             width: 2,
           ),
         ),

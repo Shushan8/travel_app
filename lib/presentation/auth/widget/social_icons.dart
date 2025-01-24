@@ -4,15 +4,17 @@ import 'package:travel_app/presentation/core/consts/colors.dart';
 
 class SocialIcons extends StatelessWidget {
   final String assetsIcon;
+  final void Function() onTap;
   const SocialIcons({
     super.key,
     required this.assetsIcon,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
