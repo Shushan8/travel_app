@@ -23,7 +23,7 @@ class ButtonNavigation extends StatelessWidget {
         context.router.replace(const HomeRoute());
         break;
       case 3:
-        context.router.replace(const HomeRoute());
+        context.router.replace(const ProfileRoute());
         break;
     }
   }
@@ -33,7 +33,10 @@ class ButtonNavigation extends StatelessWidget {
     return BottomNavigationBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      onTap: (index) => onItemTapped(context, index),
+      onTap: (index) => onItemTapped(
+        context,
+        index,
+      ),
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(

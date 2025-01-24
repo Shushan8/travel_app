@@ -81,11 +81,13 @@ class TabSelector extends StatelessWidget {
           SizedBox(height: 40),
           SizedBox(
             height: 350,
-            child: TabBarView(children: [
-              PlacesList(),
-              PlacesList(),
-              PlacesList(),
-            ],),
+            child: TabBarView(
+              children: [
+                PlacesList(),
+                PlacesList(),
+                PlacesList(),
+              ],
+            ),
           ),
         ],
       ),

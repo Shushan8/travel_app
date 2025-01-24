@@ -61,9 +61,7 @@ class TravelInfoCard extends StatelessWidget {
                       Assets.icon.gradientStar,
                       width: 16,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    SizedBox(width: 10),
                     Text(
                       '4.79',
                       style: AppTypography.s14w5cB,
@@ -71,14 +69,14 @@ class TravelInfoCard extends StatelessWidget {
                     Text(
                       '(78 reviews)',
                       style: AppTypography.s14w4cGAE,
-                    )
+                    ),
                   ],
                 ),
                 SizedBox(height: 10),
                 Text(
                   'See reviews',
                   style: AppTypography.s14w4cGAE,
-                )
+                ),
               ],
             ),
             SizedBox(height: 10),
@@ -106,21 +104,22 @@ class TravelInfoCard extends StatelessWidget {
                     description: 'from ₹1999/ night',
                     color: AppColors.blueColorF,
                     icon: Assets.icon.vector2,
-                  )
+                  ),
                 ],
               ),
             ),
             GradientButton(
-                title: 'Plan trip',
-                onTap: () {
-                  context.router.push(
-                    CalenderScheduleRoute(),
-                  );
-                },
-                begin: Alignment.bottomLeft,
-                horizontal: 1,
-                vertical: 10,
-                borderRadius: 10)
+              title: 'Plan trip',
+              onTap: () {
+                context.router.push(
+                  CalenderScheduleRoute(),
+                );
+              },
+              begin: Alignment.bottomLeft,
+              horizontal: 1,
+              vertical: 10,
+              borderRadius: 10,
+            ),
           ],
         ),
       ),

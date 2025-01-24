@@ -14,42 +14,43 @@ class PlanScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        extendBody: true,
-        body: AppBackground(
-          child: SafeArea(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  flex: 4,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ProfileHeader(),
-                        SizedBox(height: 30),
-                        Text(
-                          'Manali',
-                          style: AppTypography.s16w6CF2,
-                        ),
-                        SizedBox(height: 20),
-                        Expanded(child: PlanCard()),
-                        SizedBox(height: 20),
-                      ],
-                    ),
+      extendBody: true,
+      body: AppBackground(
+        child: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                flex: 4,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ProfileHeader(),
+                      SizedBox(height: 30),
+                      Text(
+                        'Manali',
+                        style: AppTypography.s16w6CF2,
+                      ),
+                      SizedBox(height: 20),
+                      Expanded(child: PlanCard()),
+                      SizedBox(height: 20),
+                    ],
                   ),
                 ),
-                Expanded(
-                  flex: 4,
-                  child: BottomSheets(),
-                )
-              ],
-            ),
+              ),
+              Expanded(
+                flex: 4,
+                child: BottomSheets(),
+              )
+            ],
           ),
         ),
-        bottomNavigationBar: ButtonNavigation(
-          selectedIndex: 1,
-        ));
+      ),
+      bottomNavigationBar: ButtonNavigation(
+        selectedIndex: 1,
+      ),
+    );
   }
 }

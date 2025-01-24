@@ -17,53 +17,58 @@ class CustomBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: Container(
-            decoration: BoxDecoration(color: Colors.transparent),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                context.router.canPop()
-                    ? GestureDetector(
-                        onTap: () => Navigator.pop(context),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: AppColors.greyColorG5A,
-                          ),
-                          child: Center(
-                            child: SvgPicture.asset(Assets.icon.arrowLeft),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              context.router.canPop()
+                  ? GestureDetector(
+                      onTap: () => Navigator.pop(context),
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColors.greyColorG5A,
+                        ),
+                        child: Center(
+                          child: SvgPicture.asset(
+                            Assets.icon.arrowLeft,
                           ),
                         ),
-                      )
-                    : SizedBox(),
-                text != null
-                    ? Text(
-                        text!,
-                        style: AppTypography.s24w6cB,
-                      )
-                    : Text(''),
-                icon != null
-                    ? GestureDetector(
-                        onTap: () => Navigator.pop(context),
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: AppColors.greyColorG5A,
-                          ),
-                          child: Center(
-                            child: SvgPicture.asset(Assets.icon.scan),
-                          ),
+                      ),
+                    )
+                  : SizedBox(),
+              text != null
+                  ? Text(
+                      text!,
+                      style: AppTypography.s24w6cB,
+                    )
+                  : Text(''),
+              icon != null
+                  ? GestureDetector(
+                      onTap: () => Navigator.pop(context),
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColors.greyColorG5A,
                         ),
-                      )
-                    : SizedBox(),
-              ],
-            ),
-          )),
+                        child: Center(
+                          child: SvgPicture.asset(Assets.icon.scan),
+                        ),
+                      ),
+                    )
+                  : SizedBox(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

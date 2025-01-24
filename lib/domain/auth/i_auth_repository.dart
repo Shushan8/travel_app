@@ -12,5 +12,4 @@ abstract interface class IAuthRepository {
   });
 
   Future<Either<String, Unit>> signUpWithGoogle();
-
 }

@@ -3,7 +3,7 @@ import 'package:travel_app/presentation/core/consts/colors.dart';
 import 'package:travel_app/presentation/core/consts/typography.dart';
 
 class ScheduleItem extends StatelessWidget {
-  final String time;
+  final DateTime time;
   final String title;
   final String description;
   final String icon;
@@ -26,7 +26,7 @@ class ScheduleItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          time,
+          '${time.hour}:${time.minute}',
           style: AppTypography.s18w4cB,
         ),
         SizedBox(width: 10),
@@ -73,12 +73,14 @@ class ScheduleItem extends StatelessWidget {
                 ],
               ),
               Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                      color: AppColors.whiteColor,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Image.asset(icon))
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: AppColors.whiteColor,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Image.network(icon),
+              ),
             ],
           ),
         ),

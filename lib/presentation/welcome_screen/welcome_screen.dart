@@ -64,10 +64,10 @@ class WelcomeScreen extends StatelessWidget {
                         style: AppTypography.s20w6cBA,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
-              SizedBox(height: 60)
+              SizedBox(height: 60),
             ],
           ),
         ),

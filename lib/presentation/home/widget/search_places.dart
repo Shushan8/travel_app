@@ -16,20 +16,27 @@ class SearchPlaces extends StatelessWidget {
             color: AppColors.greyColorD2,
           ),
         ),
-        focusedBorder:  OutlineInputBorder(
+        focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(21),
           borderSide: BorderSide(
             color: AppColors.greyColorD2,
           ),
         ),
         suffixIcon: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 11),
-          child: Image.asset(Assets.images.burger.path, width: 10, height: 10,),
+          padding: const EdgeInsets.symmetric(
+            vertical: 10,
+            horizontal: 11,
+          ),
+          child: Image.asset(
+            Assets.images.burger.path,
+            width: 10,
+            height: 10,
+          ),
         ),
         hintText: "Search Places",
         hintStyle: AppTypography.s16w5h24cGF9,
         border: InputBorder.none,
       ),
     );
-}
+  }
 }

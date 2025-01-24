@@ -5,7 +5,8 @@ import 'package:travel_app/presentation/core/consts/colors.dart';
 import 'package:travel_app/presentation/core/consts/typography.dart';
 
 class DetailsInfoTile extends StatelessWidget {
-  const DetailsInfoTile({super.key});
+  final String celsius;
+  const DetailsInfoTile({super.key, required this.celsius});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class DetailsInfoTile extends StatelessWidget {
             ),
             SizedBox(width: 5),
             Text(
-              '16  C',
+              celsius,
               style: AppTypography.s18w5cG,
             ),
           ],

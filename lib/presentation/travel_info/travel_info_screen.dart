@@ -46,13 +46,19 @@ class SpecificItineraryScreen extends StatelessWidget {
             ),
             Spacer(),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 55, vertical: 20),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 55,
+                vertical: 20,
+              ),
               child: Text(
                 'Manali',
                 style: AppTypography.s42w5cW,
               ),
             ),
-            Expanded(flex: 3, child: TravelInfoCard())
+            Expanded(
+              flex: 3,
+              child: TravelInfoCard(),
+            ),
           ],
         ),
       ),

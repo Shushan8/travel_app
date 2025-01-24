@@ -9,17 +9,15 @@ class AppBackground extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(
-              Assets.images.background.path,
-            ),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(
+            Assets.images.background.path,
           ),
         ),
-        child: child,
-      
+      ),
+      child: child,
     );
-   
   }
 }

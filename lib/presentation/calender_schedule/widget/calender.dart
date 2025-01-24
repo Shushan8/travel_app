@@ -12,7 +12,7 @@ class Calender extends StatefulWidget {
 
 class _CalenderState extends State<Calender> {
   DateTime focusedDay = DateTime.now();
-  List<DateTime> _selectedDays = []; // Список выбранных дат
+  final List<DateTime> _selectedDays = [];
   @override
   Widget build(BuildContext context) {
     return TableCalendar(
@@ -24,13 +24,15 @@ class _CalenderState extends State<Calender> {
         return _selectedDays.contains(day);
       },
       onDaySelected: (selectedDay, focusedDay) {
-        setState(() {
-          if (_selectedDays.contains(selectedDay)) {
-            _selectedDays.remove(selectedDay);
-          } else {
-            _selectedDays.add(selectedDay);
-          }
-        });
+        setState(
+          () {
+            if (_selectedDays.contains(selectedDay)) {
+              _selectedDays.remove(selectedDay);
+            } else {
+              _selectedDays.add(selectedDay);
+            }
+          },
+        );
       },
       headerStyle: HeaderStyle(
         leftChevronIcon: Row(

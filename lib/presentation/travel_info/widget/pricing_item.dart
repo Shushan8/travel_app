@@ -9,7 +9,12 @@ class PricingItem extends StatelessWidget {
   final String icon;
   final Color color;
 
-  const PricingItem({super.key, required this.title, required this.description, required this.icon, required this.color});
+  const PricingItem(
+      {super.key,
+      required this.title,
+      required this.description,
+      required this.icon,
+      required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +32,7 @@ class PricingItem extends StatelessWidget {
                 color: color,
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: SvgPicture.asset(
-               icon
-              ),
+              child: SvgPicture.asset(icon),
             ),
             SizedBox(width: 20),
             Expanded(
@@ -50,7 +53,7 @@ class PricingItem extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 10,),
+        SizedBox(height: 10),
         Divider()
       ],
     );

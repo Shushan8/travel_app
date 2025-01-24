@@ -101,7 +101,9 @@ class BottomSheets extends StatelessWidget {
             GradientButton(
               title: 'Next step',
               onTap: () {
-                context.router.push(PartnerRoute());
+                context.router.push(
+                  PartnerRoute(),
+                );
               },
               begin: Alignment.topLeft,
               horizontal: 1,

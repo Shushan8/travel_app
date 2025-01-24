@@ -14,23 +14,38 @@ class SnowSection extends StatelessWidget {
           children: [
             Column(
               children: [
-                Text('Day 1',
-                 style: AppTypography.s18w6cB,),
-                Text('July 14', style: AppTypography.s16w4cG,),
-              ],
-            ),
-             Column(
-              children: [
-                Text('Day 2',
-                 style: AppTypography.s18w6cB,),
-                Text('July 15', style: AppTypography.s16w4cG,),
+                Text(
+                  'Day 1',
+                  style: AppTypography.s18w6cB,
+                ),
+                Text(
+                  'July 14',
+                  style: AppTypography.s16w4cG,
+                ),
               ],
             ),
             Column(
               children: [
-                Text('Day 3',
-                 style: AppTypography.s18w6cB,),
-                Text('July 16', style: AppTypography.s16w4cG,),
+                Text(
+                  'Day 2',
+                  style: AppTypography.s18w6cB,
+                ),
+                Text(
+                  'July 15',
+                  style: AppTypography.s16w4cG,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Text(
+                  'Day 3',
+                  style: AppTypography.s18w6cB,
+                ),
+                Text(
+                  'July 16',
+                  style: AppTypography.s16w4cG,
+                ),
               ],
             ),
           ],

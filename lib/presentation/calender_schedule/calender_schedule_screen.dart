@@ -30,14 +30,17 @@ class _CalenderScheduleScreenState extends State<CalenderScheduleScreen> {
             SizedBox(
               height: 10,
             ),
-            SizedBox(width: double.infinity, child: CalendarCard()),
+            SizedBox(
+              width: double.infinity,
+              child: CalendarCard(),
+            ),
             Calender(),
             Text(
               'Select dates',
               style: AppTypography.s16w6cBl,
             ),
             SelectDate(),
-            SizedBox(height: 40)
+            SizedBox(height: 40),
           ],
         ),
       ),

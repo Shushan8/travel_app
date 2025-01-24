@@ -14,41 +14,42 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        extendBody: true,
-        body: AppBackground(
-          child: SafeArea(
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  children: [
-                    ProfileHeader(),
-                    SizedBox(height: 25),
-                    SearchPlaces(),
-                    SizedBox(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Popular Places',
-                          style: AppTypography.s16w6CF2,
-                        ),
-                        Text(
-                          'View all',
-                          style: AppTypography.s16w6C8,
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 30),
-                    TabSelector(),
-                  ],
-                ),
+      extendBody: true,
+      body: AppBackground(
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [
+                  ProfileHeader(),
+                  SizedBox(height: 25),
+                  SearchPlaces(),
+                  SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Popular Places',
+                        style: AppTypography.s16w6CF2,
+                      ),
+                      Text(
+                        'View all',
+                        style: AppTypography.s16w6C8,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  TabSelector(),
+                ],
               ),
             ),
           ),
         ),
-        bottomNavigationBar: ButtonNavigation(
-          selectedIndex: 0,
-        ));
+      ),
+      bottomNavigationBar: ButtonNavigation(
+        selectedIndex: 0,
+      ),
+    );
   }
 }

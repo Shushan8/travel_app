@@ -1,10 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fpdart/fpdart.dart';
-import 'package:travel_app/domain/i_auth_repository.dart';
+import 'package:travel_app/domain/auth/i_auth_repository.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthRepositoryImpl implements IAuthRepository {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
 
   @override
   Future<Either<String, Unit>> signUpWithEmailAndPassword({
@@ -40,11 +42,12 @@ class AuthRepositoryImpl implements IAuthRepository {
       );
       return const Right(unit);
     } catch (e) {
-      return Left(e.toString());
+      return Left(
+        e.toString(),
+      );
     }
   }
-  
-  
+
   @override
   Future<Either<String, Unit>> signUpWithGoogle() async {
     final GoogleSignIn googleSignIn = GoogleSignIn();
@@ -69,5 +72,4 @@ class AuthRepositoryImpl implements IAuthRepository {
       return Left('Error: $e');
     }
   }
-
 }

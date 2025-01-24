@@ -1,7 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:travel_app/application/bloc/auth_bloc.dart';
+import 'package:travel_app/application/auth/auth_bloc.dart';
+import 'package:travel_app/application/user_create/bloc/user_bloc.dart';
 import 'package:travel_app/presentation/core/consts/colors.dart';
 import 'package:travel_app/presentation/core/consts/typography.dart';
 import 'package:travel_app/presentation/core/widget/custom_bar.dart';
@@ -117,6 +118,11 @@ class _AuthScreenState extends State<AuthScreen> {
                             );
                           },
                           success: () {
+                            toggleSignUp
+                                ? null
+                                : context
+                                    .read<UserBloc>()
+                                    .add(UserEvent.createUser());
                             context.router.push(
                               HomeRoute(),
                             );

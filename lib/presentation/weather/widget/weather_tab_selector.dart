@@ -12,14 +12,14 @@ class WeatherTabSelector extends StatelessWidget {
       length: 3,
       child: Column(
         children: [
-         SizedBox(height: 30),
+          SizedBox(height: 30),
           TabBar(
             labelPadding: EdgeInsets.symmetric(horizontal: 3),
             dividerColor: Colors.transparent,
             indicator: BoxDecoration(
-               border: Border.all(
-                    color: Colors.transparent,
-                  ),
+              border: Border.all(
+                color: Colors.transparent,
+              ),
               borderRadius: BorderRadius.circular(15),
               gradient: LinearGradient(
                 colors: [
@@ -72,11 +72,12 @@ class WeatherTabSelector extends StatelessWidget {
           Expanded(
             child: TabBarView(
               children: [
-                SnowSection(widget: SnowBottomSheets())
-                
+                SnowSection(
+                  widget: SnowBottomSheets(),
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

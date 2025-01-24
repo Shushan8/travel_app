@@ -63,6 +63,9 @@ class $AssetsIconGen {
   /// File path: assets/icon/home.svg
   String get home => 'assets/icon/home.svg';
 
+  /// File path: assets/icon/icon arrow righT.svg
+  String get iconArrowRighT => 'assets/icon/icon arrow righT.svg';
+
   /// File path: assets/icon/icon clock.svg
   String get iconClock => 'assets/icon/icon clock.svg';
 
@@ -106,6 +109,7 @@ class $AssetsIconGen {
         fb,
         google,
         home,
+        iconArrowRighT,
         iconClock,
         iconCloud,
         iconHeart,

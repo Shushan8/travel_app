@@ -20,11 +20,12 @@ class SnowBottomSheets extends StatelessWidget {
           right: 20,
         ),
         decoration: BoxDecoration(
-            color: AppColors.greyColorF8,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(37),
-              topRight: Radius.circular(37),
-            )),
+          color: AppColors.greyColorF8,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(37),
+            topRight: Radius.circular(37),
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -34,33 +35,32 @@ class SnowBottomSheets extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 children: [
                   ScheduleItem(
-                    time: "12:30",
+                    time: DateTime.now(),
                     title: "Manali Mall Road",
                     description: "Start Your Adventure",
                     icon: Assets.images.cold.path,
                     isActive: true,
                   ),
                   ScheduleItem(
-                    time: "14:30",
+                    time: DateTime.now(),
                     title: "Solang Valley",
                     description: "Feel the Thrill",
                     icon: Assets.images.cold1.path,
                   ),
                   ScheduleItem(
-                    time: "15:30",
+                    time: DateTime.now(),
                     title: "Kothi Village",
                     description: "Pause and Reflect",
                     icon: Assets.images.cold2.path,
-                  
                   ),
-                   ScheduleItem(
-                    time: "16:30",
+                  ScheduleItem(
+                    time: DateTime.now(),
                     title: "Solang Valley",
                     description: "Feel the Thrill",
                     icon: Assets.images.cold1.path,
                   ),
                   ScheduleItem(
-                    time: "17:30",
+                    time: DateTime.now(),
                     title: "Kothi Village",
                     description: "Pause and Reflect",
                     icon: Assets.images.cold2.path,
@@ -70,11 +70,15 @@ class SnowBottomSheets extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15,),
+              padding: const EdgeInsets.symmetric(
+                vertical: 15,
+              ),
               child: GradientButton(
                 title: 'View specific itinerary',
                 onTap: () {
-                  context.router.push(SpecificItineraryRoute());
+                  context.router.push(
+                    SpecificItineraryRoute(),
+                  );
                 },
                 begin: Alignment.topLeft,
                 horizontal: 1,

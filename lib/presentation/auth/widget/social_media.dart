@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:travel_app/application/bloc/auth_bloc.dart';
+import 'package:travel_app/application/auth/auth_bloc.dart';
 import 'package:travel_app/gen/assets.gen.dart';
 import 'package:travel_app/presentation/auth/widget/social_icons.dart';
 

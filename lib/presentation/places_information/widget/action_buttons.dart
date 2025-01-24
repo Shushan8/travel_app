@@ -13,33 +13,46 @@ class ActionButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Expanded(
-            child: DecoratedBox(
-          decoration: BoxDecoration(
+          child: DecoratedBox(
+            decoration: BoxDecoration(
               color: AppColors.blackColor,
-              borderRadius: BorderRadius.circular(20)),
-          child: GestureDetector(
-            onTap: (){
-              context.router.push(PlanRoute(),);
-            },
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
-              child: Center(
-                  child: Text(
-                'Enter the plan',
-                style: AppTypography.s16w5h24cW,
-              )),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: GestureDetector(
+              onTap: () {
+                context.router.push(
+                  PlanRoute(),
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 28,
+                  vertical: 14,
+                ),
+                child: Center(
+                    child: Text(
+                  'Enter the plan',
+                  style: AppTypography.s16w5h24cW,
+                )),
+              ),
             ),
           ),
         ),
-            
-            ),
         SizedBox(width: 10),
         Expanded(
           child: OutlinedButton(
             onPressed: () {},
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-              child: Text("View other", style: TextStyle(color: Colors.black)),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 14,
+              ),
+              child: Text(
+                "View other",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
         ),

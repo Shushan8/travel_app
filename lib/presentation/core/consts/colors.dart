@@ -12,7 +12,7 @@ class AppColors {
   static const lightOrange4 = Color(0xffffa460);
 
   static const lightOrange3 = Color(0xffffa360);
-  
+
   static const blackColor = Color(0xff000000);
 
   static const blackColorA = Color(0xff0A0A0A);
@@ -61,7 +61,7 @@ class AppColors {
 
   static const redColorB = Color(0xffFBEFF1);
 
-    static const blueColorF = Color(0xffEFF5FB);
+  static const blueColorF = Color(0xffEFF5FB);
 
   static const blackColor8F = Color(0xffF8F8F8);
 

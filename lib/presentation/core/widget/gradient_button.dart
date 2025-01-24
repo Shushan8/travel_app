@@ -5,19 +5,18 @@ import 'package:travel_app/presentation/core/consts/typography.dart';
 class GradientButton extends StatelessWidget {
   final String title;
   final void Function() onTap;
-  final AlignmentGeometry  begin;
+  final AlignmentGeometry begin;
   final double horizontal;
   final double vertical;
   final double borderRadius;
-  const GradientButton({
-    super.key,
-    required this.title,
-    required this.onTap,
-    required this.begin,
-    required this.horizontal,
-    required this.vertical,
-    required this.borderRadius
-  });
+  const GradientButton(
+      {super.key,
+      required this.title,
+      required this.onTap,
+      required this.begin,
+      required this.horizontal,
+      required this.vertical,
+      required this.borderRadius});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class GradientButton extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Padding(
-          padding:  EdgeInsets.symmetric(
+          padding: EdgeInsets.symmetric(
             horizontal: horizontal,
             vertical: vertical,
           ),
@@ -51,5 +50,3 @@ class GradientButton extends StatelessWidget {
     );
   }
 }
-
-

@@ -117,7 +117,7 @@ class AppTypography {
     fontWeight: FontWeight.w600,
     color: AppColors.whiteColor,
   );
-    static const s24w6cB = TextStyle(
+  static const s24w6cB = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w600,
     color: AppColors.blackColor,
@@ -137,7 +137,7 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     color: AppColors.whiteColor,
   );
-   static const s42w5cW = TextStyle(
+  static const s42w5cW = TextStyle(
     fontSize: 42,
     fontWeight: FontWeight.w500,
     color: AppColors.whiteColor,
@@ -157,7 +157,7 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     color: AppColors.blackColorE,
   );
-  
+
   static const s22w6cB = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.w600,
@@ -168,7 +168,7 @@ class AppTypography {
     fontWeight: FontWeight.w600,
     color: AppColors.greyColor49,
   );
-    static const s16w6cBl = TextStyle(
+  static const s16w6cBl = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,
     color: AppColors.blackColor,
@@ -179,12 +179,12 @@ class AppTypography {
     color: AppColors.greyColor49,
   );
 
-    static const s18w4cB = TextStyle(
+  static const s18w4cB = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w400,
     color: AppColors.blackColor,
   );
-      static const s18w6cB = TextStyle(
+  static const s18w6cB = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
     color: AppColors.blackColor,

@@ -94,6 +94,25 @@ class CalenderScheduleRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [EditProfileScreen]
+class EditProfileRoute extends PageRouteInfo<void> {
+  const EditProfileRoute({List<PageRouteInfo>? children})
+      : super(
+          EditProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'EditProfileRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const EditProfileScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -133,10 +152,19 @@ class PartnerRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [PlacesInformationScreen]
-class PlacesInformationRoute extends PageRouteInfo<void> {
-  const PlacesInformationRoute({List<PageRouteInfo>? children})
-      : super(
+class PlacesInformationRoute extends PageRouteInfo<PlacesInformationRouteArgs> {
+  PlacesInformationRoute({
+    Key? key,
+    required Hotel hotel,
+    required Weather weather,
+    List<PageRouteInfo>? children,
+  }) : super(
           PlacesInformationRoute.name,
+          args: PlacesInformationRouteArgs(
+            key: key,
+            hotel: hotel,
+            weather: weather,
+          ),
           initialChildren: children,
         );
 
@@ -145,9 +173,33 @@ class PlacesInformationRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const PlacesInformationScreen();
+      final args = data.argsAs<PlacesInformationRouteArgs>();
+      return PlacesInformationScreen(
+        key: args.key,
+        hotel: args.hotel,
+        weather: args.weather,
+      );
     },
   );
+}
+
+class PlacesInformationRouteArgs {
+  const PlacesInformationRouteArgs({
+    this.key,
+    required this.hotel,
+    required this.weather,
+  });
+
+  final Key? key;
+
+  final Hotel hotel;
+
+  final Weather weather;
+
+  @override
+  String toString() {
+    return 'PlacesInformationRouteArgs{key: $key, hotel: $hotel, weather: $weather}';
+  }
 }
 
 /// generated route for
@@ -165,6 +217,25 @@ class PlanRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const PlanScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [ProfileScreen]
+class ProfileRoute extends PageRouteInfo<void> {
+  const ProfileRoute({List<PageRouteInfo>? children})
+      : super(
+          ProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProfileRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const ProfileScreen();
     },
   );
 }

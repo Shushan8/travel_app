@@ -65,9 +65,9 @@ class PlanCard extends StatelessWidget {
                                   AssetImage(Assets.images.image2.path),
                               radius: 20,
                             ),
-                          )
+                          ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -78,16 +78,17 @@ class PlanCard extends StatelessWidget {
             children: [
               Spacer(),
               GradientButton(
-                  title: 'Manali',
-                  onTap: () {
-                    context.router.push(
-                      WeatherRoute(),
-                    );
-                  },
-                  begin: Alignment.topLeft,
-                  horizontal: 21,
-                  vertical: 10,
-                  borderRadius: 10),
+                title: 'Manali',
+                onTap: () {
+                  context.router.push(
+                    WeatherRoute(),
+                  );
+                },
+                begin: Alignment.topLeft,
+                horizontal: 21,
+                vertical: 10,
+                borderRadius: 10,
+              ),
             ],
           ),
         ],

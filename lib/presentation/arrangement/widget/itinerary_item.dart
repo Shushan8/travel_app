@@ -83,7 +83,7 @@ class ItineraryItem extends StatelessWidget {
                       child: Image.asset(
                         icon,
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

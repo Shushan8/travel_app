@@ -22,7 +22,9 @@ class SelectDate extends StatelessWidget {
                 decoration: InputDecoration(
                   prefixIcon: Padding(
                     padding: const EdgeInsets.all(13),
-                    child: SvgPicture.asset(Assets.icon.a2User),
+                    child: SvgPicture.asset(
+                      Assets.icon.a2User,
+                    ),
                   ),
                   hintText: "Query journey",
                   border: OutlineInputBorder(
@@ -49,7 +51,7 @@ class SelectDate extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
         SizedBox(height: 16),
@@ -70,16 +72,17 @@ class SelectDate extends StatelessWidget {
         ),
         SizedBox(height: 20),
         GradientButton(
-            title: 'Next step',
-            onTap: () {
-              context.router.push(
-                ArrangementRoute(),
-              );
-            },
-            begin: Alignment.topLeft,
-            horizontal: 1,
-            vertical: 15,
-            borderRadius: 10)
+          title: 'Next step',
+          onTap: () {
+            context.router.push(
+              ArrangementRoute(),
+            );
+          },
+          begin: Alignment.topLeft,
+          horizontal: 1,
+          vertical: 15,
+          borderRadius: 10,
+        ),
       ],
     );
   }
